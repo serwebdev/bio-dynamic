@@ -1,0 +1,28 @@
+.container {
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+}
+
+.h2 {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  color: $black;
+  text-align: center;
+
+  @media (max-width: 770px) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 50px;
+  }
+}
