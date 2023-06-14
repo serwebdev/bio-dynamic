@@ -5,9 +5,13 @@
 @import './global';
 
 // Компоненты
-@import './header';
 /* @import '../components/services/services'; */
-@import './footer';
+
+// header
+@import './header';
 
 // Страницы
 @import './index';
+
+// footer
+@import './footer';

@@ -8,12 +8,17 @@
 
   phone.forEach(item => {
     item.addEventListener('mouseover', () => {
-      console.log('over');
       imgWrap.classList.add('hover');
     });
     item.addEventListener('mouseout', () => {
-      console.log('mouseout');
       imgWrap.classList.remove('hover');
     });
   });
 })();
+
+AOS.init({
+  disable: function () {
+    var maxWidth = 768;
+    return window.innerWidth < maxWidth;
+  },
+});

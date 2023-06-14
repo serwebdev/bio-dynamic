@@ -1,7 +1,26 @@
 (function () {
+  const header = document.querySelector('.header');
+  const headerBottom = document.querySelector('.header__bottom .container');
   const burger = document.querySelector('.header__burger');
   const menu = document.querySelector('.menu');
   const menuLink = document.querySelectorAll('.menu__link');
+
+  // Выносим меню во внешний контейнер для fixed позиционирования
+  const mediaQuery1100 = window.matchMedia('(max-width: 1100px)');
+
+  function addMediaQuery() {
+    if (mediaQuery1100.matches) {
+      header.after(menu);
+    } else {
+      headerBottom.append(menu);
+    }
+  }
+
+  addMediaQuery();
+
+  mediaQuery1100.addEventListener('change', () => {
+    addMediaQuery();
+  });
 
   // Сбросит transition с menu
   menu.style.transition = 'none';
